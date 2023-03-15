@@ -1,22 +1,19 @@
-
-import React from "react";
-import Characters from "./Characters";
 import "./App.css";
-import Footer from "./components/Footer";
-import NavBar from "./components/NavBar";
+import React from "react";
+import Characters from "./pages/Characters";
 
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 
 function App() {
 
-
   return (
     <div className="App">
-      <h1 className="orange">Hello React World</h1>
+      
       <NavBar />
       <Characters />
       <Footer />
-      
     </div>
   );
 }

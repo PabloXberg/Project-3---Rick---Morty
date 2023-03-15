@@ -1,16 +1,14 @@
-import React from 'react'
-import './src/index.css';
+import React from "react";
 
 function Footer() {
+  return (
+    <div className="Footer">
 
-
-    return (
+      {/* <input type="button" value="back" />
+      <input type="button" value="next" /> */}
       
-        <div className="Footer">
-            
-          
-        </div>
+    </div>
   )
 }
 
-export default Footer
+export default Footer;
