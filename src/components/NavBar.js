@@ -2,9 +2,11 @@ import React from "react";
 import '../index.css';
 
 
+
 function NavBar() {
   return (
     <div className="NavBar">
+    
       <div className="inputDiv">
         <input id="textInput" placeholder="Rick it...!" type="text" />
       </div>
