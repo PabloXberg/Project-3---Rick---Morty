@@ -16,7 +16,9 @@ function NavBar() {
     </div>
       <div className="animation">
         {/* <iframe src="https://giphy.com/embed/l378BzHA5FwWFXVSg" /> */}
-        <iframe src="https://giphy.com/embed/3o85xFUjFFIGxIy7fO" />
+        {/* <iframe src="https://giphy.com/embed/3o85xFUjFFIGxIy7fO" /> */}
+        <iframe src="https://giphy.com/embed/3o85xKFJJ0d3xE8vh6"/>
+        {/* <iframe src="https://giphy.com/embed/uZrLs0rcNc9sA"/> */}
       </div>
       
      </div>

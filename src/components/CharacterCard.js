@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
+import CardModal from "./CardModal";
 
-const goModal = () => {
-
-};
 
 function CharacterCard({ character }) {
+    const [show, setShow] = useState(false);
   return (
     <div className="flip-card">
       <div className="flip-card-inner">
@@ -18,14 +17,17 @@ function CharacterCard({ character }) {
                     <h1>{character.name}</h1>
                     <h5>Gender: {character.gender}</h5>
                     <h5>Species: {character.species}</h5>
-            <h5>Status: {character.status}</h5>
-           <Button variant="success">more</Button>
+                    <h5>Status: {character.status}</h5>
+           <Button onClick={()=>setShow(true)} id="CardBtn">More</Button>
 
   
           </div>
         </div>
       </div>
+        <CardModal onClose={()=> setShow(false)} show={show} character={character} />
+
     </div>
+  
   );
 }
 

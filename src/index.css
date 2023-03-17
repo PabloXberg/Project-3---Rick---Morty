@@ -1,5 +1,5 @@
 body{
-    background-color: lightgreen;
+    background-color: black;
 }
 
 .NavBar{
@@ -11,7 +11,7 @@ position: auto;
     width: 100%;
 }
 .Footer {
-    border: solid 2px black;
+    /* border: solid 2px black; */
     height: 100px;
     width: 100%;
     position: absolute;
@@ -109,7 +109,7 @@ border: none;
 } 
 .headerLogo:hover {
     transform: rotateY(180deg);
-    transform: rotateX(180deg);
+
     transition: transform 0.6s;
     transform-style: preserve-3d;
    
@@ -123,4 +123,76 @@ border: none;
 iframe {
     border-radius: 50%;
     width: 200px;
+}
+
+.modal-container {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 400px;
+    height: 550px;
+    background-color: #fff;
+    border: solid 3px orange;
+    border-radius: 20px;
+        align-items: center;
+            justify-self: center;
+            box-shadow: 10px;
+}
+
+.modal-header,
+.modal-footer {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.modal-picture {
+    width: 100%;
+    border-radius: 15px;
+        align-items: center;
+            justify-self: center;
+
+}
+
+.modal-title {
+    margin: 0;
+}
+
+.modal-body {
+    /* border-top: 1px solid red;
+  border-bottom: 1px solid blue; */
+}
+
+.modal-close-btn {
+    color:white;
+    background-color:black;
+    width: 100px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.modal-close-btn:hover {
+    background-color: red;
+    transition: 800ms;
+}
+h1{
+    color: white;
+  
+}
+#pagination{
+    width: 100%;
+    padding-left: 40%;
+    padding-right: 40%;
+    display:-moz-grid-line;
+
 }
