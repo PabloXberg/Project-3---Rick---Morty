@@ -15,9 +15,7 @@ function CharacterCard({ character }) {
           <img className="gris" src={character.image} alt="Avatar" />
           <div className="text">
                     <h1>{character.name}</h1>
-                    <h5>Gender: {character.gender}</h5>
-                    <h5>Species: {character.species}</h5>
-                    <h5>Status: {character.status}</h5>
+                
            <Button onClick={()=>setShow(true)} id="CardBtn">More</Button>
 
   

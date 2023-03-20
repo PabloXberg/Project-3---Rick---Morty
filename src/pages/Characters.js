@@ -10,13 +10,12 @@ function Characters() {
   const [errores, setErrores] = useState(null);
   const [searchInput, setSearchInput] = useState('');
   const [specialsearchInput, setSpecialSearchInput] = useState('?name=');
-  const [filteredResults, setFilteredResults] = useState([]);
   const [page, setPage] = useState(1);
 
   let [url, setUrl] = useState(`https://rickandmortyapi.com/api/character/`);
  
 
-  const filteredChads = characters?.filter((character) => {
+  const FilteredCards = characters?.filter((character) => {
     return character.name.toLocaleLowerCase().includes(searchInput .toLocaleLowerCase());
   });
 
@@ -38,6 +37,7 @@ function Characters() {
         setPage(page + 1)
          } 
       else {
+
         alert("Ultima pagina");
       }
     };
@@ -45,10 +45,12 @@ function Characters() {
      const prevPage = () => {
       if (info.prev) {
         setUrl(info.prev);
-        setPage(page - 1)
+        setPage(page - 1);
          } 
       else {
+      
         alert("Primera pagina");
+        
       }
     };
 
@@ -58,52 +60,36 @@ function Characters() {
   }
 
   const specialSearch = (event) => {
-
-    console.log('searchInput :>> ', searchInput);
-
     setSpecialSearchInput(specialsearchInput + searchInput);
-
-    console.log('specialsearchInput :>> ', specialsearchInput);
-
-    setUrl(`https://rickandmortyapi.com/api/character/?name=`+searchInput);
-
-    console.log('url :>> ', url);
+    setUrl(`https://rickandmortyapi.com/api/character/?name=` + searchInput);
+    setPage(1);
   }
   
   useEffect(() => {
     fetchData(url);
-    console.log('url :>> ', url);
       }, [url, specialsearchInput]);
 
   return (
     <div>
      <ButtonGroup id="pagination" className="me-2"  >
-        <Button variant="secondary" onClick={prevPage} type="button" >Prev</Button>
-
+        <Button variant="secondary" onClick={prevPage} type="button" id ="next">Prev</Button>
         <h1>  {page}  </h1>
-
-        <Button variant="secondary" onClick={nextPage} type="button" >Next</Button>
+        <Button variant="secondary" onClick={nextPage} type="button" id="prev">Next</Button>
         <input onChange={handlesInputChange} id="textInput" placeholder="Rick it...!" type="text" />
        <Button variant="primary" onClick={specialSearch} type="button" >Search</Button>
       </ButtonGroup>
-            
-
-            
+                 
       <div className="CardContainer">
-        {characters && filteredChads.map((character) => {
+        {characters && FilteredCards.map((character) => {
           return (
             <CharacterCard character={character} setShow={setShow} />
           )
         }
-        )
+      )
 }
-
-          
-      </div>
-      
-    
-    </div>
-  );
+</div>
+</div>
+);
 }
 
 export default Characters;

@@ -16,8 +16,12 @@ function CardModal(props) {
             < img className='modal-picture' src={props.character.image} alt={props.character.id}/>
            </div>
            <div className='modal-body'>
-            <p>Species: {props.character.species}</p>
-            <p>Status: {props.character.status}</p>
+            <h5>Species: {props.character.species}</h5> 
+            <h5>Status: {props.character.status}</h5>
+            <h5>Gender: {props.character.gender}</h5>
+            <h5>Species: {props.character.species}</h5>
+            <h5>Location: {props.character.location.name}</h5>
+            <h5>Origin: {props.character.origin.name}</h5>
            </div>
            <div className='modal-footer'>
              <Button onClick={props.onClose} className='modal-close-btn'>Close</Button>
